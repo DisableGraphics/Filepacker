@@ -12,7 +12,7 @@ void print_help()
     std::cout << "Usage:\tfilepacker <folder> <number of files per group>\n";
     std::cout << "Options:\n\t-r\t--recursive\tRecursive packing\n";
     std::cout << "\t-o\t--output\tSelect output folder. It must exist\n";
-    std::cout << "\t-m\t--move\tMoves the files instead of copying\n";
+    std::cout << "\t-m\t--move\t\tMoves the files instead of copying\n";
 
     std::cout << "\t-h\t--help\t\tDisplay this help\n";
 }
@@ -76,6 +76,11 @@ int main(int argc, char ** argv)
         return EXIT_FAILURE;
     }
     std::string outdir{argv[1]};
+    if(!std::filesystem::is_directory(outdir))
+    {
+        print_help();
+        return EXIT_FAILURE;
+    }
     bool recursive{false};
     bool move{false};
     if (argc > 3)
@@ -90,6 +95,11 @@ int main(int argc, char ** argv)
             {
                 i++;
                 outdir = argv[i];
+                if(!std::filesystem::is_directory(outdir))
+                {
+                    print_help();
+                    return EXIT_FAILURE;
+                }
             }
             else if(strcmp(argv[i], "-m") == 0 || strcmp(argv[i], "--move") == 0)
             {
