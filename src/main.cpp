@@ -9,7 +9,7 @@
 
 void print_help()
 {
-    std::cout << "Usage:\tpacker <folder> <number of files per group>\n";
+    std::cout << "Usage:\tfilepacker <folder> <number of files per group>\n";
     std::cout << "Options:\n\t-r\t--recursive\tRecursive packing\n";
     std::cout << "\t-o\t--output\tSelect output folder. It must exist\n";
     std::cout << "\t-m\t--move\tMoves the files instead of copying\n";

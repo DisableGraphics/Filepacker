@@ -1,5 +1,7 @@
 all:
-	g++ src/main.cpp -o packer -std=c++17
+	g++ src/main.cpp -o filepacker -std=c++17
 
 install:
-	cp packer /usr/bin/packer -f
+	cp filepacker /usr/bin/filepacker -f
+setup-vscode:
+	bear -- make
