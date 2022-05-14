@@ -9,5 +9,5 @@ Packs groups of n files in folders.
 ```
 git clone https://github.com/DisableGraphics/Filepacker/
 cd Filepacker
-make && make install
+make && sudo make install
 ```
