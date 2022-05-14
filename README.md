@@ -1,4 +1,4 @@
-# Packer
+# Filepacker
 Packs groups of n files in folders.
 
 # Example:
