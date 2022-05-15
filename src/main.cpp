@@ -1,4 +1,5 @@
 #include <cstdlib>
+#include <exception>
 #include <iostream>
 #include <filesystem>
 #include <string>
@@ -77,6 +78,15 @@ int main(int argc, char ** argv)
     }
     std::string outdir{argv[1]};
     if(!std::filesystem::is_directory(outdir))
+    {
+        print_help();
+        return EXIT_FAILURE;
+    }
+    try
+    {
+        std::stoi(argv[2]);
+    } 
+    catch (std::exception & e)
     {
         print_help();
         return EXIT_FAILURE;

@@ -3,5 +3,6 @@ all:
 
 install:
 	cp filepacker /usr/bin/filepacker -f
+	
 setup-vscode:
 	bear -- make
