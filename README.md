@@ -3,7 +3,7 @@ Packs groups of n files in folders.
 
 # Example:
 
-`filepacker . 30 #Packs all the files in this folder in groups of 30` 
+`filepacker . 30 #Packs all the files in this folder in folders of 30 files each` 
 
 # Compiling
 ```
